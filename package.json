@@ -2,6 +2,7 @@
   "name": "duty-commander",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -17,10 +18,11 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "electron-start": "electron . debug"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/electron-is-dev": "^1.1.1",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-dev-server": "^4.7.2",
+    "css-loader": "^6.10.0",
+    "electron": "^29.1.4",
+    "electron-is-dev": "^3.0.1",
+    "electron-reloader": "^1.2.3",
+    "html-webpack-plugin": "^5.6.0",
+    "node-pty": "^1.0.0",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3",
+    "xterm": "^5.3.0"
   }
 }
